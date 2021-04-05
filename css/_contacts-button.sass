@@ -1,0 +1,70 @@
+.contacts-btn {
+	position: fixed;
+	right: 4.6vw;
+	bottom: 3.5vh;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+	z-index: 80;
+	transition: opacity .3s ease;
+	&.hide {
+		opacity: 0;
+		pointer-events: none; }
+	&:hover {
+		.contacts-btn__btn__open-icon {
+			transform: scale(0.9); }
+		.contacts-btn__contacts-menu {
+			padding-left: 27px;
+			padding-right: calc(27px + 48px);
+			width: 345px;
+			opacity: 1; }
+		.contacts-btn__btn {
+			box-shadow: 0px 0px 18px rgba(160, 58, 219, 0.5); } }
+	&__btn {
+		background: $accent-color;
+		width: 58px;
+		height: 58px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		transition: box-shadow .3s ease;
+
+		&__open-icon {
+			transition: transform .5s ease;
+			img {
+				display: block; } } }
+
+	&__contacts-menu {
+		background: rgba($accent-color, .6);
+		border-radius: 25px;
+		// padding-left: 27px
+		// padding-right: calc(27px + 58px)
+		height: 58px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		right: 10px;
+		z-index: 1;
+		overflow: hidden;
+		width: 0px;
+		opacity: 0;
+		transition: width .5s ease, padding .5s ease, opacity .5s ease;
+		&__link {
+			display: block;
+			text-decoration: none;
+			margin-left: 27px;
+			transition: transform .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+			&:nth-child(1) {
+				margin-left: 0px; }
+			&:hover {
+				transform: scale(1.1); }
+
+			img {
+				display: block; } } } }
