@@ -6,3 +6,18 @@
   for = "*.css" 
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+/index.html
+  # headers for that path:
+  
+  Cache-Control: max-age=604800
+# another path:
+/js/app.js
+  # headers for that path:
+  
+  Cache-Control: max-age=604800
+  # another path:
+/css/app.css
+  # headers for that path:
+  
+  Cache-Control: max-age=604800
